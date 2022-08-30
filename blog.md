@@ -1,5 +1,5 @@
 ---
 layout: blog-index
-title: Luxedo's
-description: Test page
+title: ASC Homepage
+description: Index
 ---

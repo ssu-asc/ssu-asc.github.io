@@ -1,1 +1,1 @@
-### Visit me @ http://luxedo.github.io/
+### Visit me @ https://ssu-asc.github.io/

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Luxedo's
+title: ASC Homepage
 description: My webpage
 ---
 # My name is Luiz Eduardo Amaral
