@@ -36,18 +36,14 @@ theme_base: "dark"       # Theme palette (light | dark)
 theme_switch: on         # Show color switch (on | off)
 
 # Extra settings
-blog: on                 # Show blog tag and post list (on | off)
+blog: off                 # Show blog tag and post list (on | off)
 avatar: on               # Show avatar (on | off)
-avatar_image: "assets/img/avatar.jpg"
-avatar_description: "My name is Luiz Amaral and I like making and breaking stuff."
+avatar_image: "assets/img/icon.png"
+avatar_description: "ASC"
 highlighter_theme: monokai  # Theme of the syntax_highlighter [base16 |
                             # colorful | github | gruvbox | molokai |
                             # monokai | pastie | thankful_eyes | tulip ]
 toolbar_priority:        # Order of the items in the toolbar (except for blog and home)
-  - Web
-  - Open Source
-  - Games
-  - Other
 
 # Collections
 collections:
