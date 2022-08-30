@@ -38,7 +38,7 @@ theme_switch: on         # Show color switch (on | off)
 # Extra settings
 blog: off                 # Show blog tag and post list (on | off)
 avatar: on               # Show avatar (on | off)
-avatar_image: "assets/img/icon.png"
+avatar_image: "assets/img/icon2.png"
 avatar_description: "ASC"
 highlighter_theme: monokai  # Theme of the syntax_highlighter [base16 |
                             # colorful | github | gruvbox | molokai |
