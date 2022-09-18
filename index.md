@@ -18,6 +18,7 @@ description: My webpage
 [CODEGATE 2022 대학부 예선 2위, 본선 진출 (Team 해군해난구조전대)](http://www.safetimes.co.kr/news/articleView.html?idxno=108259)
 - 
 [전국 대학생 사이버보안 경진대회(Hacktheon) 1위 (Team ASC)](https://www.smartcitytoday.co.kr/news/articleView.html?idxno=24207)
+- 웹서비스 정보보안 경진대회 대학팀 부문 장려상 (Team 좋은게좋은거지)
 - DEFCON CTF FINAL 3위
 - 차세대보안리더양성프로그램 Best of the Best 10기 1명 수료
 - 차세대보안리더양성프로그램 Best of the Best 11기 1명 진행중
