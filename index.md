@@ -15,7 +15,7 @@ description: My webpage
 
 #### 2022
 - 
-[CODEGATE 2022 대학부 2위 (Team 해군해난구조전대)]((https://www.edaily.co.kr/news/read?newsId=03958966632523752&mediaCodeNo=257)
+[CODEGATE 2022 대학부 2위 (Team 해군해난구조전대)](https://www.edaily.co.kr/news/read?newsId=03958966632523752&mediaCodeNo=257)
 - 
 [전국 대학생 사이버보안 경진대회(Hacktheon) 1위 (Team ASC)](https://www.smartcitytoday.co.kr/news/articleView.html?idxno=24207)
 - 웹서비스 정보보안 경진대회 대학팀 부문 장려상 (Team 좋은게좋은거지)
