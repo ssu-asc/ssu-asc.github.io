@@ -68,7 +68,7 @@ void check(Person *p){
 
 check함수를 확인해보면 p→age가 true면 `system("/bin/sh");` 로 쉘을 실행해 원하는 명령어들을 실행할 수 있습니다. 그러므로 아무 값이나 많이 입력해 p→age를 덮으면 flag를 획득할 수 있습니다.
 
-![](/asserts/img/z.png)
+![](/assets/img/z.png)
 
 flag : `flag{o0o0o0000Overf10w!}`
 
@@ -1204,7 +1204,7 @@ nc ssuctf.kr 1339
 
 Brainfuck 코드를 돌릴 수 있는데, Brainfuck Interpreter 메모리 어딘가에 플래그가 숨어있다고 하니까 모든 메모리를 출력해보도록 brainfuck 코드를 짜면 된다.
 
-![Untitled](/asserts/img/Untitled%2026.png)
+![Untitled](/assets/img/Untitled%2026.png)
 
 무한반복으로 ptr 출력하고 ptr++을 수행하면 된다.
 
@@ -1228,6 +1228,6 @@ while:
 		continue
 ```
 
-![Untitled](/asserts/img/e0061c49e68b4dbc8047ca5b2c52fabc/Untitled%2027.png)
+![Untitled](/assets/img/e0061c49e68b4dbc8047ca5b2c52fabc/Untitled%2027.png)
 
 flag : `flag{just_memory_search}`
