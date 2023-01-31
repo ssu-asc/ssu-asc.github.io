@@ -9,10 +9,12 @@ date:   2023-01-31
 |  | Pwnable | Reversing | Crypto | Web | Misc | 총합 |
 | --- | --- | --- | --- | --- | --- | --- |
 | 문제 개수 | 4 | 3 | 4 | 4 | 5 | 20 |
+<!--more-->
+# 숭실대학교 교내해킹방어대회 문제 풀이(Writeup)
 
 # Pwnable(시스템해킹)
 
-## ****Stack OoOverflow(EASY) - 10 Solves****
+## Stack OoOverflow(EASY) - 10 Solves
 
 ```
 Stack이 뭘까요? 메모리 구조 Stack을 알아봅시다!
@@ -66,11 +68,11 @@ void check(Person *p){
 
 check함수를 확인해보면 p→age가 true면 `system("/bin/sh");` 로 쉘을 실행해 원하는 명령어들을 실행할 수 있습니다. 그러므로 아무 값이나 많이 입력해 p→age를 덮으면 flag를 획득할 수 있습니다.
 
-![스크린샷 2023-01-30 오전 12.33.02.png](img%20e0061c49e68b4dbc8047ca5b2c52fabc/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-30_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_12.33.02.png)
+![스크린샷 2023-01-30 오전 12.33.02.png](/asserts/img%20e0061c49e68b4dbc8047ca5b2c52fabc/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-01-30_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_12.33.02.png)
 
 flag : `flag{o0o0o0000Overf10w!}`
 
-## ****Heap OoOverflow(EASY) - 4 Solves****
+## Heap OoOverflow(EASY) - 4 Solves
 
 ```
 메모리 구조에서 heap 영역은 동적할당하면 메모리가 적재되는 공간이라는 소문이..
@@ -162,7 +164,7 @@ p.interactive()
 
 flag : `flag{ooooOoooo0000o0ooOOO0O0O0O0overf0w!!}`
 
-## ****ggon-dae(MEDIUM) - 0 Solves****
+## ggon-dae(MEDIUM) - 0 Solves
 
 ```
 대학생활은 인사를 잘해야죠.
@@ -217,7 +219,7 @@ p.interactive()
 
 flag : `flag{Base_of_Pwnable_in_2023}`
 
-## ****Fake EBP(Hard) - 0 Solves****
+## Fake EBP(Hard) - 0 Solves
 
 ```
 Only 1 Byte Overflow
@@ -420,7 +422,7 @@ Base64로 인코딩 돼 있음을 확인할 수 있고 Decode해주면 flag를 �
 
 flag : `flag{H311o_4ndR01d!}`
 
-## ****RRRR-(HARD) - 2 Solves****
+## RRRR-(HARD) - 2 Solves
 
 ```
 RRRRRRRRR-andom
@@ -594,7 +596,7 @@ flag : `flag{4e878714dfdbb7b4dd41dad636c00fe8cf6cdb50}`
 
 # Crypto(암호학)
 
-## ****ASCree(EASY) - 13 Solves****
+## ASCree(EASY) - 13 Solves
 
 ```
 512비트 키를 사용하는 ASCree암호를 만들어 봤어요. 이정도 키크기면 절대 안 뚫리겠죠??
@@ -635,7 +637,7 @@ Flag는 `FLAG{8BIT_SECURITY_SHOULD_NOT_EVEN_COUNT_AS_SECURE}` 입니다.
 > Tip : 이런 간단한 암호 문제를 풀때 CyberChef 같은 도구를 이용하면 빠르게 풀수 있습니다.
 > 
 
-## ****“X”*255+“OR”(EASY) - 0 Solves****
+## “X”*255+“OR”(EASY) - 0 Solves
 
 ```
 이번엔 정말로 안전한 XOR 암호를 개발했어요 OTP를 사용한다면 절대 안 뚫리겠죠??
@@ -698,7 +700,7 @@ print(''.join(flag))
 
 flag : `flag{ez_xXXxxXXXxXXxxxxXxXXxXXxxxXXxxXXxOR_cHaLleNGe_1s_It?}`
 
-## ****PolyRSA(MEDIUM) - 0 Solves****
+## PolyRSA(MEDIUM) - 0 Solves
 
 ```
 두 인접한 소수를 RSA의 p,q로 쓰는것은 보안 문제가 있다고 들었어요.
@@ -728,7 +730,7 @@ $N$의 식이 1개의 변수로 표현되고 다른 함수의 계산이 크게 �
 
 다음은 풀이 코드입니다.
 
-```
+```py
 from math import isqrt
 from decimal import Decimal,getcontext
 from gmpy2 import next_prime
@@ -771,7 +773,7 @@ Flag는 `flag{having_relation_between_prime_make_order_base_cryptosystem_vulnera
 
 # Web(웹해킹)
 
-## ****Qrcode Image(EASY) - 12 Solves****
+## Qrcode Image(EASY) - 12 Solves
 
 ```
 소심하고 대책없는 관리자의 정보를 찾아서...
@@ -801,7 +803,7 @@ admin을 클릭하면 아래와 같이 qrcode가 뜨지 않는다.
 
 flag : `flag{Bru7E_F0rc3_9o0d}`
 
-## ****웹프_최최종_final_시험(MEDIUM) - 6 Solves****
+## 웹프_최최종_final_시험(MEDIUM) - 6 Solves
 
 ```
 쇼핑몰에서 어떤걸 사야할지 모르겠어요..
@@ -869,7 +871,7 @@ log파일에서 webadmin_manage.jsp라는 관리자 페이지 경로를 찾을 �
 
 flag : ****`flag{y0ur_GrADE_1s_Real_A+}`****
 
-## ****Jinja?(MEDIUM) - 5 Solves****
+## Jinja?(MEDIUM) - 5 Solves
 
 ```
 개발자가 문서를 작성하기 위해 서비스를 개발했는데.. Flask Framework에서 취약점이 발생한다고?
@@ -1070,7 +1072,7 @@ flag : `flag{8f6d5b31a62ccdbb4190b5edf546d26b}`
 
 # Misc(Miscellaneous)
 
-## ****MIC CHECK - 32 Solves****
+## MIC CHECK - 32 Solves
 
 ```
 flag는 Discord 공지에 있습니다!
@@ -1078,13 +1080,13 @@ flag는 Discord 공지에 있습니다!
 Discord Link : https://discord.gg/pwDXbn38wS
 ```
 
-## ****Strings(EASY) - 21 Solves****
+## Strings(EASY) - 21 Solves
 
 ```
 Do you know there are two flags in this image file??!?!
 ```
 
-## ****Simple Bash(MEDIUM) - 11 Solves****
+## Simple Bash(MEDIUM) - 11 Solves
 
 ```
 bash jail를 아십니까?
@@ -1182,7 +1184,7 @@ base32, base64, rev, fold, tac, nl, sort등의 출력을 사용할 수 있습니
 
 flag : `flag{SImplE_EsC4p3!}`
 
-## ****Face Lock(MEDIUM) - 0 Solves****
+## Face Lock(MEDIUM) - 0 Solves
 
 ```
 인공 신경망으로 얼굴 잠금을 만들었어요!
@@ -1190,7 +1192,7 @@ flag : `flag{SImplE_EsC4p3!}`
 http://ssuctf.kr:56789/
 ```
 
-## ****Search Everything(HARD) - 6 Solves****
+## Search Everything(HARD) - 6 Solves
 
 ```
 악덕 ASC 회장님이 Brainfuck Interpreter를 제작하고, 메모리 어딘가에 플래그를 넣어두었습니다...
