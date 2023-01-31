@@ -1,5 +1,5 @@
 ---
 layout: blog-index
-title: ASC Homepage
+title: ASC Blog
 description: Index
 ---

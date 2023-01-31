@@ -36,7 +36,7 @@ theme_base: "dark"       # Theme palette (light | dark)
 theme_switch: on         # Show color switch (on | off)
 
 # Extra settings
-blog: off                 # Show blog tag and post list (on | off)
+blog: on                 # Show blog tag and post list (on | off)
 avatar: on               # Show avatar (on | off)
 avatar_image: "assets/img/icon2.jpg"
 avatar_description: "ASC"
