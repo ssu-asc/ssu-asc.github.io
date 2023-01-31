@@ -262,13 +262,13 @@ int main(int argc, char *argv[])
 }
 ```
 
-1. rbp 레지스터 --> 이전 함수의 rsp레지스터 복귀주소를 가리킨다.
-2. fgets --> 입력받은 문자열(개행 포함)의 맨 끝에 "\x00"이 추가된다.
-3. rbp 레지스터를 원하는 값으로 바꿀 수 있을 때 원하는 주소로 rsp를 옮길 수 있다. ( stack pivoting or fake_ebp라고 부름릅니다.)
+- rbp 레지스터 --> 이전 함수의 rsp레지스터 복귀주소를 가리킨다.
+- fgets --> 입력받은 문자열(개행 포함)의 맨 끝에 "\x00"이 추가된다.
+- rbp 레지스터를 원하는 값으로 바꿀 수 있을 때 원하는 주소로 rsp를 옮길 수 있다. ( stack pivoting or fake_ebp라고 부릅니다.)
+- reference : [https://dokhakdubini.tistory.com/254](https://dokhakdubini.tistory.com/254)
 
-reference : [https://dokhakdubini.tistory.com/254](https://dokhakdubini.tistory.com/254)
+- vuln_funtion의 rbp를 payload위치로 설정했을 때 레지스터들의 변화는 아래와 같다.
 
-1. vuln_funtion의 rbp를 payload위치로 설정했을 때 레지스터들의 변화는 아래와 같다.
 ![ezgif.com-gif-maker.gif](/assets/img/ezgif.com-gif-maker.gif)
     
 
@@ -868,7 +868,7 @@ log파일에서 webadmin_manage.jsp라는 관리자 페이지 경로를 찾을 �
 
 ![Untitled](/assets/img/Untitled%2024.png)
 
-flag : ****`flag{y0ur_GrADE_1s_Real_A+}`****
+flag : `flag{y0ur_GrADE_1s_Real_A+}`
 
 ### Jinja?(MEDIUM) - 5 Solves
 
@@ -1084,6 +1084,7 @@ Discord Link : https://discord.gg/pwDXbn38wS
 ```
 Do you know there are two flags in this image file??!?!
 ```
+hxd를 통해서 PNG footer 뒤에 flag를 읽어오면 됩니다.
 
 ### Simple Bash(MEDIUM) - 11 Solves
 
@@ -1190,6 +1191,32 @@ flag : `flag{SImplE_EsC4p3!}`
 
 http://ssuctf.kr:56789/
 ```
+onnx파일과 서버가 주어집니다. onnx 파일을 `netron`으로 열어서 보게 되면 다음과 같은 residual이 있는 cnn을 확인해 볼 수 있습니다. 
+
+![구조적으로는 regnet에 가까운 구조입니다.](/assets/img/Pasted_image_20230130120924.png)
+
+구조적으로는 regnet에 가까운 구조입니다.
+
+서버가 이미지를 받고 normalize만 한 후 바로 추론하기 때문에 adversarial 비슷한 공격을 수행해 볼 수 있습니다. 사실 이미지 입력에 제한 조건이나 전처리가 많지는 않아서 입력 값에 대해서 최적화 해볼 수 있습니다.
+신경망을 $y=f(x,w)$ 라고 할 때 $y_1$이 높게 나오는 $x$ 값을 최적화 하면 됩니다.
+사용했던 loss 함수는 다음과 같습니다.
+
+![](/assets/img/gggg.png)
+
+$x'$는 실제 저장 가능한 이미지의 근사치 입니다. $x''$는 normalized 된 이미지고요. 
+
+$L_c$ loss는 cross entropy 입니다. 다른 logit에 비해서 $y_1$이 더 높아지도록 유도합니다. 
+
+$L_q$ loss는 quatization aware 하도록 만든 loss입니다. MSE loss 와 비슷하지만 round function을 근사한 함수를 사용합니다. 이미지가 저장되었을때 크게 바뀌지 않도록 유도합니다. 
+
+$-\beta y_1$항은 $y_1$ 의 수치가 특히나 더 많이 나올수 있도록 유도합니다. Cross entropy 이외에는 실험적으로 추가된 loss입니다. 없어도 통과할만한 테스트 케이스가 나옵니다.
+
+대략 300step 정도면 충분히 인증을 통과할만한 이미지가 생성됩니다.
+
+아래는 정답 예시 이미지 입니다.
+
+![](/assets/img/1_94b7c11d.png)
+
 
 ### Search Everything(HARD) - 6 Solves
 
